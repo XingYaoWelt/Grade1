@@ -1,0 +1,53 @@
+#define pi 3.1415
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main()
+{
+	float r = 1.5;
+	int h = 3;
+	int input = 0;
+
+	printf("设圆半径r=1.5，圆柱高h=3，求圆周长、圆面积、圆球表面积、圆球体积、圆柱体积?\n");
+	printf("圆周长?输入1\n");
+	printf("圆面积?输入2\n");
+	printf("圆球表面积?输入3\n");
+	printf("圆球体积?输入4\n");
+	printf("圆柱体积?输入5\n");
+	scanf("%d", &input);
+
+	if (input == 1)
+	{
+		double z = 0;
+		z = 2 * pi * r;
+		printf("圆周长=%.2f", z);
+	}
+
+	if (input == 2)
+	{
+		double y = 0;
+		y = pi * r * r;
+		printf("圆面积=%.2f", y);
+	}
+	
+	if (input == 3)
+	{
+		double x = 0;
+		x = 4 * pi * r * r;
+		printf("圆球表面积=%.2f", x);
+	}
+
+	if (input == 4)
+	{
+		double w = 0;
+		w = 4 / 3 * pi * r * r * r;
+		printf("圆球体积=%.2f", w);
+	}
+
+	if (input == 5)
+	{
+		double j = 0;
+		j =  pi * r * r * h;
+		printf("圆柱体积=%.2f", j);
+	}
+	return 0;
+}
