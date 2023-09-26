@@ -1,0 +1,56 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+void menu()
+{
+	printf("1.Add\n");
+	printf("2.Sub\n");
+	printf("3.Mul\n");
+	printf("4.Div\n");
+	printf("0.Exit\n");
+}
+
+void Add(float x, float y)
+{
+	printf("output=%f\n", x + y);
+}
+void Sub(float x, float y)
+{
+	printf("output=%f\n", x - y);
+}
+void Mul(float x, float y)
+{
+	printf("output=%f\n", x * y);
+}
+void Div(float x, float y)
+{
+	printf("output=%f\n", x / y);
+}
+
+int main()
+{
+	int input = 0;
+	float x = 0;
+	float y = 0;
+	do
+	{
+		menu();
+		printf("select\n");
+		scanf("%d", &input);
+		void(*p[])(float, float) = {0, Add, Sub, Mul, Div};
+		if (input <= 4 && input >= 1)
+		{
+			printf("input two numbers");
+			scanf("%f%f", &x, &y);
+			p[input] (x,y);
+		}
+		else if (input == 0)
+		{
+			printf("exit");
+		}
+		else
+		{
+			printf("wrong");
+		}
+	} while (input);
+
+}
