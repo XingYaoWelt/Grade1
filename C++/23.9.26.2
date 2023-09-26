@@ -1,0 +1,45 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+	float a = 0, b = 0,d =0;
+	char c;
+
+	printf("input a number1");
+	scanf("%f", &a);
+
+	getchar();
+
+	printf("input a operator");
+	scanf("%c", &c);
+
+	printf("input a number2");
+	scanf("%f", &b);
+
+	if (c == '+')
+	{
+		d = a + b;
+	}
+	else if (c == '-')
+	{
+		d = a - b;
+	}
+	else if (c == '*')
+	{
+		d = a * b;
+	}
+	else if (c == '/')
+	{
+		if (b >= 0.00000000 && b <= 0.00000001)
+		{
+			printf("wrong");
+			return 0;
+		}
+		else
+			d = a / b;
+	}
+
+	printf("%f", d);
+	return 0;
+}
