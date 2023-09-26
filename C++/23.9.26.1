@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int a, b;
+	srand(time(0));
+	a = rand();
+	a = a % 10;
+
+	printf("input a number");
+	scanf("%d", &b);
+
+	if (a == b)
+	{
+		printf("ok");
+	}
+	else
+	{
+		printf("ng");
+	}
+		
+	return 0;
+}
