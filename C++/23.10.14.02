@@ -1,0 +1,39 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+    int a,b;
+    int n = 0;
+
+    srand(time(0))
+    a = rand();
+    a = a % 100;
+
+    while (i)
+    {
+        n++;
+
+        printf("put a number");
+        scanf("%d", &b);
+
+        if (a == b)
+        {
+            printf("ok\n");
+            break;
+        }
+        else if (b>a)
+        {
+            printf("big\n");
+        }
+        else if (b < a)
+        {
+            printf("small\n");
+        }
+
+    }
+
+
+    return 0;
+}
