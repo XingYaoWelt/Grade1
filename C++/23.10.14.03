@@ -1,0 +1,42 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+    float a, b, c;
+    char op;
+
+    printf("num1");
+    scanf("%f", &a);
+
+    getchar();
+
+    printf("op");
+    scanf("%c", &op);
+
+    printf("num2");
+    scanf("%f", &b);
+
+    switch (op)
+    {
+    case '+':
+        c = a + b;
+        printf("num1+num2=%f", c);
+        break;
+    case'-':
+        c = a - b;
+        printf("num1-num2=%f", c);
+        break;
+    case'*':
+        c = a * b;
+        printf("num1*num2=%f", c);
+        break;
+    case'/':
+        c = a / b;
+        printf("num1/num2=%f", c);
+        break;
+    default:
+        printf("wrong");
+    }
+    return 0;
+}
